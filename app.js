@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+var web = require('./web.js');
+var app = new web();
 
 var lame = require('lame');
 var throttle = require('throttle');
@@ -30,28 +30,13 @@ encoder.on("data", function(chunk) {
   });
 });
 
-app.get('/music', function(req, res) {
+app.on('connected', function(res) {
   clients.push(res);
-  res.on('close', function() {
-    clients = clients.filter(function(c) { return res !== c; });
-    console.log('Client disconnected : ' + clients.length);
-  });
   console.log('Client connected : ' + clients.length); 
 });
 
-app.engine('jade', require('jade').__express);
-app.set('view engine', 'jade');
-
-
-app.get('/', function(req, res) {
-  res.render('index', { title: 'anison Party' });
+app.on('disconnected', function(res) {
+  clients = clients.filter(function(c) { return res !== c; });
+  console.log('Client disconnected : ' + clients.length);
 });
 
-var server = app.listen(8080, function () {
-
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log("Lets ansion Party at http://%s:%s", host, port);
-
-});
