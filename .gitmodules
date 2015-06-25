@@ -1,0 +1,3 @@
+[submodule "shairport"]
+	path = shairport
+	url = git@github.com:abrasive/shairport.git
