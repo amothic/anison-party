@@ -47,4 +47,11 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'anison Party' });
 });
 
-app.listen("8000");
+var server = app.listen(8080, function () {
+
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log("Lets ansion Party at http://%s:%s", host, port);
+
+});
