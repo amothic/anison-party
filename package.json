@@ -1,0 +1,12 @@
+{
+  "name": "anison-party",
+  "version": "0.0.0",
+  "description": "anison is god",
+  "author": "Daichi TOMA",
+  "dependencies": {
+    "express": "^4.13.0",
+    "lame": "^1.2.2",
+    "throttle": "^1.0.3",
+    "jade": "^1.11.0"
+  }
+}
