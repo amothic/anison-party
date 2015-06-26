@@ -1,5 +1,4 @@
-var web = require('./application');
-var app = new web();
+var app = require('./application');
 
 var lame = require('lame');
 var throttle = require('throttle');
@@ -30,6 +29,7 @@ encoder.on("data", function(chunk) {
   });
 });
 
+var app = new app();
 app.on('connected', function(res) {
   clients.push(res);
   console.log('Client connected : ' + clients.length); 
