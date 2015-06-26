@@ -1,4 +1,4 @@
-var web = require('./web.js');
+var web = require('./application');
 var app = new web();
 
 var lame = require('lame');
