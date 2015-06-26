@@ -1,4 +1,4 @@
-var app = require('./application');
+var webServer = require('./lib/web-server');
 
 var lame = require('lame');
 var throttle = require('throttle');
@@ -29,13 +29,13 @@ encoder.on("data", function(chunk) {
   });
 });
 
-var app = new app();
-app.on('connected', function(res) {
+var webServer = new webServer();
+webServer.on('connected', function(res) {
   clients.push(res);
   console.log('Client connected : ' + clients.length); 
 });
 
-app.on('disconnected', function(res) {
+webServer.on('disconnected', function(res) {
   clients = clients.filter(function(c) { return res !== c; });
   console.log('Client disconnected : ' + clients.length);
 });
