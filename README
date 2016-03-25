@@ -1,0 +1,3 @@
+brew install shairport
+npm install
+./run.sh
