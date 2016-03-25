@@ -1,3 +1,6 @@
+cp config/config.sample.yaml config/config.yaml
+vi config/config.yaml
 brew install shairport
 npm install
+bundle install
 ./run.sh
