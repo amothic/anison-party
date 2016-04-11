@@ -6,6 +6,8 @@ npm install
 ./run.sh
 ```
 
+Choose anison-party on iTunes! Let's have a party!
+
 #### if you need slack notify
 
 ```
