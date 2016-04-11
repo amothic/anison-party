@@ -1,3 +1,5 @@
+iTunes --> Local AirPlay Receiver --> HTTP
+
 #### Install & Launch
 
 ```
