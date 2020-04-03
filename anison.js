@@ -1,6 +1,6 @@
 var webServer = require('./lib/web-server');
 
-var lame = require('lame');
+var lame = require('@suldashi/lame');
 var throttle = require('throttle');
 
 var SAMPLE_SIZE = 16;

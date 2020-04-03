@@ -5,7 +5,7 @@
   "author": "Daichi TOMA",
   "dependencies": {
     "express": "^4.13.0",
-    "lame": "^1.2.2",
+    "@suldashi/lame": "^1.2.5",
     "throttle": "^1.0.3",
     "jade": "^1.11.0"
   }
